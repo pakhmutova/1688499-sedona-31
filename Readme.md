@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Anna Pakhmutova](https://up.htmlacademy.ru/htmlcss/31/user/1688499).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Рыжова](https://htmlacademy.ru/profile/id418965).
 
 ---
 
