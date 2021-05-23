@@ -11,7 +11,8 @@
 <body>
    <header>
       <nav>
-         <a href="index.html"><img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Logo"></a>
+         <a href="index.html"><img src="https://via.placeholder.com/150x100" width="150" height="100"
+               alt="Логотип Седоны."></a>
          <ul>
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
@@ -24,7 +25,7 @@
    <main>
       <h1>Фильтр гостиниц</h1>
       <section>
-         <form method="get" action="https://echo.htmlacademy.ru">
+         <form method="get" action="https://echo.htmlacademy.ru" name="search_form">
             <fieldset>
                <legend>Инфраструктура</legend>
                <ul>
@@ -58,15 +59,16 @@
                <p>Стоимость в сутки, ₽:</p>
                <label><input type="text" name="min-price" value="0">от</label>
                <label><input type="text" name="max-price" value="3000">до</label>
+               <label><input type="range"></label>
                <button type="submit">Показать</button>
             </div>
          </form>
       </section>
 
       <section>
-         <h1>Сортировка гостиниц</h1>
-         <span>Найдено 3:</span>
-         <span>Сортировка:</span>
+         <h2>Сортировка гостиниц</h2>
+         <p>Найдено 3:</p>
+         <p>Сортировка:</p>
          <ul>
             <li>
                <a href="#">По цене</a>
@@ -77,83 +79,75 @@
             <li>
                <a href="#">По рейтингу</a>
             </li>
+            <div>
+               <a href="#">Arrow_Up</a>
+               <a href="#">Arrow_down</a>
+            </div>
          </ul>
       </section>
 
       <section>
-         <h1>Результат сортировки</h1>
+         <h2>Результат сортировки</h2>
          <ul>
             <li>
                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Hotel Amara">
                <h2>Amara Resort & Spa</h2>
-               <span>Гостиница</span>
+               <p>Гостиница</p>
                <span>От 4000 ₽</span>
                <a href="#">Подробнее</a>
                <a href="#">Забронировать</a>
-               <img src="#" width="150" height="100" alt="stars">
-               <img src="#" width="150" height="100" alt="stars">
-               <img src="#" width="150" height="100" alt="stars">
-               <img src="#" width="150" height="100" alt="stars">
+               <span>Stars</span>
                <span>Рейтинг: 8,5</span>
             </li>
             <li>
                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Motel Desert">
                <h2>Desert Quail Inn</h2>
-               <span>Мотель</span>
+               <p>Мотель</p>
                <span>От 3000 ₽</span>
                <a href="#">Подробнее</a>
                <a href="#">Забронировать</a>
-               <img src="#" width="150" height="100" alt="stars">
-               <img src="#" width="150" height="100" alt="stars">
-               <img src="#" width="150" height="100" alt="stars">
+               <span>Stars</span>
                <span>Рейтинг: 8,9</span>
             </li>
             <li>
                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Motel Desert">
                <h2>Villas at Poco Diablo</h2>
-               <span>Апартаменты</span>
+               <p>Апартаменты</p>
                <span>От 2000 ₽</span>
                <a href="#">Подробнее</a>
                <a href="#">Забронировать</a>
-               <img src="#" width="150" height="100" alt="stars">
-               <img src="#" width="150" height="100" alt="stars">
+               <span>Stars</span>
                <span>Рейтинг: 9,2</span>
             </li>
          </ul>
       </section>
-
-      <footer>
-         <section>
-            <h2>Контакты</h2>
-            <p>
-               <a href="#">#visitSEDONA</a>
-            </p>
-            <p>
-               <a href="tel:+78005558628">+7 800 555-86-28</a>
-            </p>
-         </section>
-
-         <section>
-            <h2>Социальные сети</h2>
-            <a href="#"><img src="https://via.placeholder.com/150x100" width="150" height="100"
-                  alt="twitter"><span>Twitter</span></a>
-            <a href="#"><img src="https://via.placeholder.com/150x100" width="150" height="100"
-                  alt="facebook"><span>Facebook</span></a>
-            <a href="#"><img src="https://via.placeholder.com/150x100" width="150" height="100"
-                  alt="youtube"><span>YouTube</span></a>
-         </section>
-
-         <section>
-            <h2>Сайт сделан</h2>
-            <p>
-               Website by
-               <a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/150x100" width="150" height="100"
-                     alt="html_academy_logo">HTML Academy</a>
-            </p>
-         </section>
-
-      </footer>
    </main>
+
+   <footer>
+      <section>
+         <h2>Контакты</h2>
+         <a href="#">#visitSEDONA</a>
+         <a href="tel:+78005558628">+7 800 555-86-28</a>
+      </section>
+
+      <section>
+         <h2>Социальные сети</h2>
+         <a href="#"><img src="https://via.placeholder.com/150x100" width="150" height="100" alt="twitter">Twitter</a>
+         <a href="#"><img src="https://via.placeholder.com/150x100" width="150" height="100" alt="facebook">Facebook</a>
+         <a href="#"><img src="https://via.placeholder.com/150x100" width="150" height="100" alt="youtube">YouTube</a>
+      </section>
+
+      <section>
+         <h2>Сайт сделан</h2>
+         <p>
+            Website by
+            <a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/150x100" width="150" height="100"
+                  alt="Логотип HTML Academy.">HTML Academy</a>
+         </p>
+      </section>
+
+   </footer>
+
 </body>
 
 </html>
