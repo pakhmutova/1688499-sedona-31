@@ -1,0 +1,191 @@
+:root {
+   --basic-black: #000000;
+   --basic-dark: #333333;
+   --basic-neutral: #f2f2f2;
+   --basic-light-neutral: #ebebeb;
+   --basic-dark-neutral: #6a6a6a;
+   --basic-white: #ffffff;
+   --basic-blue: #81b3d2;
+   --basic-dark-blue: #5496bd;
+   --basic-extra-blue: #669ec0;
+   --basic-light-grey: #a9a9a9;
+   --basic-grey: #888888;
+   --basic-extra-grey: #EEEEEE;
+
+   --special: #766357;
+   --special-dark: #604E43;
+   --special-extra-dark: #503E33;
+}
+
+.page__body {
+   margin: 0;
+   padding: 0;
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 14px;
+   line-height: 21px;
+   font-weight: 400;
+   color: var(--basic-black);
+   text-transform: uppercase;
+   background-color: var(--basic-neutral);
+}
+
+a {
+   text-decoration: none;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+.main__container {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: var(--basic-white);
+}
+
+.main__navigation {
+   font-size: 14px;
+   line-height: 26px;
+   font-weight: 700;
+   background-color: transparent;
+}
+
+.site__navigation,
+.features__list,
+.reasons__list {
+   list-style: none;
+}
+
+.site__navigation a {
+   color: var(--basic-black):
+}
+
+.site__navigation a:hover {
+   color: var(--basic-blue);
+}
+
+.site__navigation a:focus {
+   color: var(--basic-black);
+   opacity: .3;
+}
+
+.site__navigation a:active {
+   color: var(--special);
+}
+
+.welcome {
+   height: 509px;
+   background: url(../img/images/sedona.jpg) center center/cover no-repeat;
+}
+
+.description h1 {
+   font-size: 21px;
+   font-weight: 700;
+   line-height: 26px;
+   text-align: center;
+}
+
+.description p {
+   font-size: 14px;
+   line-height: 26px;
+   text-align: center;
+}
+
+.features h3 {
+   font-weight: 700;
+   font-size: 21px;
+   line-height: 21px;
+   text-align: center;
+}
+
+.features p {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 21px;
+   text-align: center; 
+}
+
+.features__item__first {
+   background-color: var(--basic-blue);
+   color: var(--basic-white);
+}
+
+.features__item__second {
+   background-color: var(--basic-extra-grey);
+}
+
+.features__item__second p,
+.reasons__item p {
+   color: var(--basic-dark);
+}
+
+.booking h3 {
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 24px;
+   text-align: center;
+}
+
+.booking p {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 24px;
+   text-align: center;
+   color: var(--basic-dark);
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--special);
+  border: none;
+}
+.button:hover {
+  background-color: var(--special-dark);
+}
+
+.button:active {
+   background-color: var(--special-extra-dark);
+   color: rgba(255, 255, 255, .3)
+}
+
+.footer__phone,
+.footer__hashtag {
+   color: inherit;
+}
+
+.footer__contacts {
+   font-weight: 700;
+   font-size: 21px;
+   line-height: 26px;
+}
+
+.footer__contacts a:hover,
+.footer__contacts a:focus {
+  text-decoration: none;
+}
+
+.social__button {
+   background-color: var(--basic-blue);
+}
+
+.social__button:hover {
+   background-color: var(--basic-extra-blue);
+}
+
+.social__button:active {
+   background-color: var(--basic-dark-blue);
+}
+
+.footer__copyright p {
+   line-height: 26px;
+   text-align: center;
+}
+
+.button__copyright a:hover {
+   color: var(--basic-blue);
+}
