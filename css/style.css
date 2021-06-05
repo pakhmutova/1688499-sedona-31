@@ -1,21 +1,25 @@
 :root {
    --basic-black: #000000;
    --basic-dark: #333333;
-   --basic-neutral: #f2f2f2;
-   --basic-light-neutral: #ebebeb;
-   --basic-dark-neutral: #6a6a6a;
    --basic-white: #ffffff;
-   --basic-blue: #81b3d2;
-   --basic-dark-blue: #5496bd;
-   --basic-extra-blue: #669ec0;
-   --basic-light-grey: #a9a9a9;
+   --basic-background: #f2f2f2;
    --basic-grey: #888888;
-   --basic-extra-grey: #EEEEEE;
-
-   --special: #766357;
-   --special-dark: #604E43;
-   --special-extra-dark: #503E33;
+   --grey-rating: #666666;
+   --grey-background: #EEEEEE;
+   --grey-blocked: #6a6a6a;
+   --grey-hover: #ebebeb;
+   --grey-active:#BDBBBC;
+   --basic-blue: #81b3d2;
+   --blue-active: #5496bd;
+   --blue-hover: #669ec0;
+   --basic-brown: #766357;
+   --brown-active: #503E33;
+   --brown-hover: #604E43;
+   
+   --basic-light-grey: #a9a9a9;
 }
+
+/* главная страница */
 
 .page__body {
    margin: 0;
@@ -26,7 +30,7 @@
    font-weight: 400;
    color: var(--basic-black);
    text-transform: uppercase;
-   background-color: var(--basic-neutral);
+   background-color: var(--basic-background);
 }
 
 a {
@@ -38,7 +42,8 @@ img {
    height: auto;
 }
 
-.main__container {
+.main__container,
+.inner__container {
    width: 1200px;
    margin: 0 auto;
    background-color: var(--basic-white);
@@ -53,7 +58,11 @@ img {
 
 .site__navigation,
 .features__list,
-.reasons__list {
+.reasons__list,
+.social__list,
+.filter__list,
+.sorting__list,
+.hotels__list {
    list-style: none;
 }
 
@@ -71,8 +80,12 @@ img {
 }
 
 .site__navigation a:active {
-   color: var(--special);
+   color: var(--basic-brown);
 }
+
+.site__navigation-current {
+   color: var(--basic-brown);
+ }
 
 .welcome {
    height: 509px;
@@ -106,16 +119,16 @@ img {
    text-align: center; 
 }
 
-.features__item__first {
+.features__item-first {
    background-color: var(--basic-blue);
    color: var(--basic-white);
 }
 
-.features__item__second {
-   background-color: var(--basic-extra-grey);
+.features__item-second {
+   background-color: var(--grey-background);
 }
 
-.features__item__second p,
+.features__item-second p,
 .reasons__item p {
    color: var(--basic-dark);
 }
@@ -141,17 +154,18 @@ img {
   color: var(--basic-white);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--special);
+  background-color: var(--basic-brown);
   border: none;
 }
 .button:hover {
-  background-color: var(--special-dark);
+  background-color: var(--brown-hover);
 }
 
 .button:active {
-   background-color: var(--special-extra-dark);
+   background-color: var(--brown-active);
    color: rgba(255, 255, 255, .3)
 }
+/* Footer */
 
 .footer__phone,
 .footer__hashtag {
@@ -169,16 +183,56 @@ img {
   text-decoration: none;
 }
 
-.social__button {
-   background-color: var(--basic-blue);
+.social__item {
+   position: relative;
+   width: 46px;
+   height: 48px;
+   background-color: var(--basic-blue)
 }
 
-.social__button:hover {
-   background-color: var(--basic-extra-blue);
+.social__item::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 17px;
+   height: 17px;
+   background: url("../img/icons/twitter.svg") center no-repeat;
 }
 
-.social__button:active {
-   background-color: var(--basic-dark-blue);
+.social__item-fb::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 12px;
+   height: 22px;
+   background: url("../img/icons/facebook.svg") center no-repeat;
+}
+
+.social__item-yt::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 20px;
+   height: 16px;
+   background: url("../img/icons/youtube.svg") center no-repeat;
+}
+
+.social__item:hover {
+   background-color: var(--blue-hover);
+}
+
+.social__item:active {
+   background-color: var(--blue-active);
+}
+
+.social__item:active::before{
+   opacity: 0.3;
 }
 
 .footer__copyright p {
@@ -186,6 +240,106 @@ img {
    text-align: center;
 }
 
-.button__copyright a:hover {
+.button__copyright:hover path {
+   fill: var(--basic-blue);
+}
+
+.button__copyright:focus path {
+   fill: var(--grey-active);
+}
+
+/* стили второй страницы */
+
+.filter {
+   width: 1200px;
+   min-height: 217px;
+   background: url(../img/images/background_filter.jpg) center center/cover no-repeat;
+}
+
+.filter__list {
+   line-height: 21px;
+}
+
+/* .filter fieldset {
+   border: 0 none;
+} */
+
+.filter__title {
+   font-weight: 700;
+   line-height: 21px;
+   color: var(--basic-white);
+}
+.filter__option {
+   color: var(--basic-white);
+   font-size: 14px;
+   font-weight: 400;
+}
+.sorting__results {
+   font-weight: 700;
+   font-size: 21px;
+   line-height: 26px;
+}
+.sorting__text {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 18px;
+}
+.sorting__link {
+   color: var(--basic-black);
+   opacity: 0.3;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 18px;
+   border-bottom: dotted;
+}
+
+.sorting__link:hover {
    color: var(--basic-blue);
+   opacity: 1;
+}
+
+/* не применяется */
+.sorting__link:active {
+   color: var(--basic-black);
+   opacity: 1;
+   border-bottom: none;
+}
+
+.sorting__link:focus {
+   color: var(--basic-blue);
+   opacity: 1;
+   border-bottom: none;
+}
+
+.hotels__title {
+   font-weight: 700;
+   font-size: 21px;
+   line-height: 26px;
+}
+
+.hotels__type,
+.hotels__price {
+   color: var(--basic-dark);
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 21px;
+}
+
+.hotel__button {
+   color: var(--basic-white);
+   background-color: var(--basic-blue);
+   font-weight: 700  ;
+   font-size: 14px;
+   line-height: 21px;
+}
+
+.button__book {
+   background-color:var(--basic-brown);
+}
+
+.hotels__rating {
+   background-color: var(--basic-background);
+   text-align: center;
+   color: var(--grey-rating);
+   
 }
