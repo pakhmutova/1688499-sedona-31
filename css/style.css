@@ -274,6 +274,17 @@ img {
    font-size: 14px;
    font-weight: 400;
 }
+.filter__button {
+   border: 2px solid var(--basic-white);
+   background: transparent;
+   border-radius: 2px;
+}
+
+.filter__button:hover {
+   background-color: var(--basic-white);
+   color: var(--basic--black);
+}
+
 .sorting__results {
    font-weight: 700;
    font-size: 21px;
@@ -311,10 +322,21 @@ img {
    border-bottom: none;
 }
 
-.hotels__title {
+.hotels__title a {
    font-weight: 700;
    font-size: 21px;
    line-height: 26px;
+   color: var(--basic-black);
+}
+
+.hotels__title a:hover {
+   color:var(--basic-blue);
+}
+
+.hotels__title a:active,
+.hotels__title a:focus {
+   color: var(--basic-black);
+   opacity: .3;
 }
 
 .hotels__type,
@@ -328,18 +350,28 @@ img {
 .hotel__button {
    color: var(--basic-white);
    background-color: var(--basic-blue);
-   font-weight: 700  ;
+   font-weight:700;
    font-size: 14px;
    line-height: 21px;
 }
 
+.hotel__button:hover {
+   background-color:var(--blue-hover);
+}
+
+.hotel__button:active {
+   background-color: var(--basic-blue);
+   color: rgba(255, 255, 255, .3)
+}
+
 .button__book {
-   background-color:var(--basic-brown);
+   font-weight:700;
+   font-size: 14px;
+   line-height: 21px;
 }
 
 .hotels__rating {
    background-color: var(--basic-background);
    text-align: center;
    color: var(--grey-rating);
-   
 }
