@@ -344,11 +344,28 @@ img {
 }
 
 /* стили второй страницы */
+/*фильтр*/
+
+.inner__container {
+   outline: 5px solid rgba(255, 0, 0, 0.7);
+   outline-offset: -5px;
+}
+
+.grid__container {
+   display: grid;
+   grid-template-rows: 217px 86px 1fr;
+}
 
 .filter {
+   outline: 5px solid rgba(0, 255, 0, 0.7);
+   outline-offset: -5px;
    width: 1200px;
    min-height: 217px;
    background: url(../img/images/background_filter.jpg) center center/cover no-repeat;
+}
+
+.filter__form {
+   display: flex;
 }
 
 .filter__list {
@@ -381,6 +398,12 @@ img {
 }
 
 /* Сортировка */
+.sorting {
+   outline: 5px solid rgba(0, 255, 255, 0.7);
+   outline-offset: -5px;
+   display: flex;
+}
+
 .sorting__results {
    font-weight: 700;
    font-size: 21px;
@@ -418,6 +441,12 @@ img {
 }
 
 /* список отелей */
+.hotels {
+   outline: 5px solid rgba(255, 0, 255, 0.7);
+   outline-offset: -5px;
+   display: flex;
+}
+
 .hotels__title a {
    font-weight: 700;
    font-size: 21px;
