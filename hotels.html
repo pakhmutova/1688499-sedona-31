@@ -23,18 +23,17 @@
             <a class="main__header-logo" href="index.html"><img src="./img/logo.svg" width="138" height="70"
                   alt="логотип Седоны."></a>
             <ul class="site__navigation">
-               <li><a href="#">Информация</a></li>
-               <li><a href="#">Фото и видео</a></li>
-               <li><a href="#">Карта штата</a></li>
-               <li class="site__navigation-current"><a href="#">Гостиницы</a></li>
+               <li class="site__navigation-item"><a href="#">Информация</a></li>
+               <li class="site__navigation-item"><a href="#">Фото и видео</a></li>
+               <li class="site__navigation-item"><a href="#">Карта штата</a></li>
+               <li class="site__navigation-item"><a class="current" href="#">Гостиницы</a></li>
             </ul>
          </nav>
       </header>
 
       <main class="inner__container">
-         <h1 class="visually-hidden">Фильтр гостиниц</h1>
-         <div class="grid__container">
          <section class="filter">
+            <h1 class="visually-hidden">Фильтр гостиниц</h1>
             <form class="filter__form" method="get" action="https://echo.htmlacademy.ru" name="search_form">
                <fieldset>
                   <legend class="filter__title">Инфраструктура</legend>
@@ -68,19 +67,33 @@
                      </li>
                   </ul>
                </fieldset>
-               <div>
-                  <p class="filter__title">Стоимость в сутки, ₽:</p>
-                  <label><input type="text" name="min-price" value="0">от</label>
-                  <label><input type="text" name="max-price" value="3000">до</label>
-                  <div></div>
-                  <div></div>
+
+               <fieldset class="filter__price">
+                  <legend class="filter__title">Стоимость в сутки, ₽:</legend>
+
+                  <div class="range__prices">
+                     <label class="min-price">
+                        от<input type="number" name="min-price" value="0"></label>
+                     <label class="max-price">
+                        до<input type="number" name="max-price" value="3000"></label>
+                  </div>
+
+                  <div class="range__controls">
+                     <div class="scale">
+                        <div class="bar"></div>
+                     </div>
+                     <div class="toggle toggle-min"></div>
+                     <div class="toggle toggle-max"></div>
+                  </div>
+
                   <button type="submit" class="button filter__button">Показать</button>
-               </div>
+
+               </fieldset>
             </form>
          </section>
 
          <section class="sorting">
-            <h2>Сортировка гостиниц</h2>
+            <h2 class="visually-hidden">Сортировка гостиниц</h2>
             <p class="sorting__results">Найдено 3:</p>
             <p class="sorting__text">Сортировка:</p>
             <ul class="sorting__list">
@@ -102,70 +115,103 @@
          </section>
 
          <section class="hotels">
-            <h2>Результат сортировки</h2>
+            <h2 class="visually-hidden">Результат сортировки</h2>
             <ul class="hotels__list">
                <li class="hotels__item">
-                  <img src="./img/images/amara.jpg" width="135" height="90" alt="Hotel Amara">
-                  <h2 class="hotels__title"><a href="#">Amara Resort & Spa</a></h2>
-                  <p class="hotels__type">Гостиница</p>
-                  <span class="hotels__price">От 4000 ₽</span>
-                  <a class="hotel__button" href="#">Подробнее</a>
-                  <a class="button button__book" href="#">Забронировать</a>
-                  <span></span>
-                  <span class="hotels__rating">Рейтинг: 8,5</span>
+                  <img class="hotels__img
+                  " src="./img/images/amara.jpg" width="135" height="90" alt="Hotel Amara">
+                  <div class="hotels__descr">
+                     <h2 class="hotels__title"><a href="#">Amara Resort & Spa</a></h2>
+                     <p>Гостиница <span class="hotels__price">От 4000 ₽</span></p>
+                     <div class="btn__wrapper">
+                        <a class="hotel__button" href="#">Подробнее</a>
+                        <a class="button button__book" href="#">Забронировать</a>
+                     </div>
+                  </div>
+                  <div class="hotels__rating">
+                     <p>
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                     </p>
+                     <span class="hotels__score">Рейтинг: 8,5</span>
+                  </div>
                </li>
+
                <li class="hotels__item">
-                  <img src="./img/images/desert.jpg" width="135" height="90" alt="Motel Desert">
-                  <h2 class="hotels__title"><a href="#">Desert Quail Inn</a></h2>
-                  <p class="hotels__type">Мотель</p>
-                  <span class="hotels__price">От 3000 ₽</span>
-                  <a class="hotel__button" href="#">Подробнее</a>
-                  <a class="button button__book" href="#">Забронировать</a>
-                  <span></span>
-                  <span class="hotels__rating">Рейтинг: 8,9</span>
+                  <img class="hotels__img
+                  " src="./img/images/desert.jpg" width="135" height="90" alt="Motel Desert">
+                  <div class="hotels__descr">
+                     <h2 class="hotels__title"><a href="#">Desert Quail Inn</a></h2>
+                     <p>Мотель <span class="hotels__price">От 3000 ₽</span></p>
+                     <div class="btn__wrapper">
+                        <a class="hotel__button" href="#">Подробнее</a>
+                        <a class="button button__book" href="#">Забронировать</a>
+                     </div>
+                  </div>
+                  <div class="hotels__rating">
+                     <p>
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                     </p>
+                     <span class="hotels__score">Рейтинг: 8,9</span>
+                  </div>
                </li>
+
                <li class="hotels__item">
-                  <img src="./img/images/villas.jpg" width="135" height="90" alt="Motel Desert">
-                  <h2 class="hotels__title"><a href="#">Villas at Poco Diablo</a></h2>
-                  <p class="hotels__type">Апартаменты</p>
-                  <span class="hotels__price">От 2000 ₽</span>
-                  <a class="hotel__button" href="#">Подробнее</a>
-                  <a class="button button__book" href="#">Забронировать</a>
-                  <span></span>
-                  <span class="hotels__rating">Рейтинг: 9,2</span>
+                  <img class="hotels__img
+                  " src="./img/images/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+                  <div class="hotels__descr">
+                     <h2 class="hotels__title"><a href="#">Villas at Poco Diablo</a></h2>
+                     <p>Апартаменты <span class="hotels__price">От 2000 ₽</span></p>
+                     <div class="btn__wrapper">
+                        <a class="hotel__button" href="#">Подробнее</a>
+                        <a class="button button__book" href="#">Забронировать</a>
+                     </div>
+                  </div>
+                  <div class="hotels__rating">
+                     <p>
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                        <img src="../img/icons/star.svg" width="19" height="17" alt="Звезда рейтинга.">
+                     </p>
+                     <span class="hotels__score">Рейтинг: 9,2</span>
+                  </div>
                </li>
+
             </ul>
          </section>
-      </div>
+
       </main>
 
       <footer class="main__footer">
          <section class="footer__contacts">
-            <h2>Контакты</h2>
+            <h2 class="visually-hidden">Контакты</h2>
             <a class="footer__hashtag" href="#">#visitSEDONA</a>
             <a class="footer__phone" href="tel:+78005558628">+7 800 555-86-28</a>
          </section>
 
          <section class="footer__social">
-            <h2>Социальные сети</h2>
+            <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social__list">
                <li class="social__item social__item-tw">
                   <a href="#"></a>
-                  <p>Twitter</p>
+                  <p class="visually-hidden">Twitter</p>
                </li>
                <li class="social__item social__item-fb">
                   <a href="#"></a>
-                  <p>Facebook</p>
+                  <p class="visually-hidden">Facebook</p>
                </li>
                <li class="social__item social__item-yt">
                   <a href="#"></a>
-                  <p>Youtube</p>
+                  <p class="visually-hidden">Youtube</p>
                </li>
             </ul>
          </section>
 
          <section class="footer__copyright">
-            <h2>Сайт сделан</h2>
+            <h2 class="visually-hidden">Сайт сделан</h2>
             <p>
                Website by
                <a class="button__copyright" href="https://htmlacademy.ru">

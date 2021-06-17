@@ -24,25 +24,24 @@
           <img src="./img/logo.svg" width="138" height="70" alt="логотип Седоны.">
         </a>
         <ul class="site__navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li class="site__navigation-item"><a href="#">Информация</a></li>
+          <li class="site__navigation-item"><a href="#">Фото и видео</a></li>
+          <li class="site__navigation-item"><a href="#">Карта штата</a></li>
+          <li class="site__navigation-item"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
 
-      <div class="welcome"></div>
-
       <section class="description">
-        <h1>Седона — небольшой городок в Аризоне,заслуживающий большего!</h1>
+        <div class="welcome"></div>
+        <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <P>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
       <section class="features">
-        <h2>Преимущества Седоны</h2>
+        <h2 class="visually-hidden">Преимущества Седоны</h2>
         <ul class="features__list">
           <li class="features__item-first">
             <div>
@@ -53,23 +52,26 @@
             <img src="./img/images/reason_1.jpg" width="800" height="256" alt="первая причина посетить Седону.">
           </li>
 
-          <ul class="reasons__list">
-            <li class="reasons__item">
-              <img src="./img/icons/house.svg" width="75" height="72" alt="дом.">
-              <h3>Жильё</h3>
-              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-            </li>
-            <li class="reasons__item">
-              <img src="./img/icons/food.svg" width="75" height="72" alt="еда.">
-              <h3>Еда</h3>
-              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-            <li class="reasons__item">
-              <img src="./img/icons/gift.svg" width="64" height="72" alt="сувениры.">
-              <h3>Сувениры</h3>
-              <p>Не только китайского, но и местного производства!</p>
-            </li>
-          </ul>
+          <li class="features__item">
+            <ul class="reasons__list">
+              <li class="reasons__item">
+                <img src="./img/icons/house.svg" width="75" height="72" alt="дом.">
+                <h3>Жильё</h3>
+                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="reasons__item">
+                <img src="./img/icons/food.svg" width="75" height="72" alt="еда.">
+                <h3>Еда</h3>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="reasons__item">
+                <img src="./img/icons/gift.svg" width="64" height="72" alt="сувениры.">
+                <h3>Сувениры</h3>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+              
+            </ul>
+          </li>
 
           <li class="features__item-first">
             <div>
@@ -79,16 +81,19 @@
             </div>
             <img src="./img/images/reason_2.jpg" width="800" height="256" alt="вторая причина посетить Седону.">
           </li>
+
           <li class="features__item-second">
             <h3>Небольшая площадь</h3>
             <p>&mdash;№3&mdash;</p>
             <p>все достопримечательности находятся очень близко</p>
           </li>
+
           <li class="features__item-second">
             <h3>Красивая дорога</h3>
             <p>&mdash;№4&mdash;</p>
             <p>ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
+
           <li class="features__item-second">
             <h3>мало туристов</h3>
             <p>&mdash;№5&mdash;</p>
@@ -98,13 +103,14 @@
       </section>
 
       <section class="booking">
-        <h2>Бронирование в Седоне</h2>
+        <h2 class="visually-hidden">Бронирование в Седоне</h2>
         <h3>Заинтересовались?</h3>
         <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="button" href="blank.html">ПОИСК ГОСТИНИЦЫ В Cедоне</a>
       </section>
 
       <section class="map">
+        <h2 class="visually-hidden">Карта Седоны</h2>
         <img src="./img/images/map.jpg" width="1199" height="600" alt="карта.">
       </section>
 
@@ -112,32 +118,32 @@
 
     <footer class="main__footer">
       <section class="footer__contacts footer__flex">
-        <!-- <h2>Контакты</h2> -->
+        <h2 class="visually-hidden">Контакты</h2>
         <a class="footer__hashtag" href="#">#visitSEDONA</a>
         <!-- <br> -->
         <a class="footer__phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
 
       <section class="footer__social footer__flex">
-        <!-- <h2>Социальные сети</h2> -->
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
           <li class="social__item social__item-tw">
             <a href="#"></a>
-            <p>Twitter</p>
+            <p class="visually-hidden">Twitter</p>
           </li>
           <li class="social__item social__item-fb">
             <a href="#"></a>
-            <p>Facebook</p>
+            <p class="visually-hidden">Facebook</p>
           </li>
           <li class="social__item social__item-yt">
             <a href="#"></a>
-            <p>Youtube</p>
+            <p class="visually-hidden">Youtube</p>
           </li>
         </ul>
       </section>
 
       <section class="footer__copyright footer__flex">
-        <!-- <h2>Сайт сделан</h2> -->
+        <h2 class="visually-hidden">Сайт сделан</h2>
         <p>
           Website by
           <a class="button__copyright" href="https://htmlacademy.ru">
