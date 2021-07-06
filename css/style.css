@@ -17,6 +17,7 @@
    --brown-active: #503e33;
    --brown-hover: #604e43;
    --opacity-color: rgba(255, 255, 255, 0.3);
+   --opacity-footer: rgba(255, 255, 255, 0.9);
    --toggle-color: #ababab;
    --toggle-shadow: rgba(171, 171, 171, 0.3);
    --border-grey: #e5e5e5;
@@ -49,6 +50,7 @@
 
 a {
    text-decoration: none;
+   color: inherit;
 }
 
 img {
@@ -314,7 +316,7 @@ img {
 
 /* Бронирование Flex */
 .booking {
-   min-height: 233px;
+   /* min-height: 233px; */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -346,6 +348,8 @@ img {
    margin-top: 32px;
    padding: 30px 0;
    font: inherit;
+   font-size: 21px;
+   line-height: 26px;
    text-align: center;
    color: var(--basic-white);
    vertical-align: middle;
@@ -362,35 +366,44 @@ img {
    color: var(--opacity-color);
 }
 
+.map iframe {
+   position: absolute;
+}
+
 /* Footer */
 
 .main__footer {
    min-height: 120px;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.footer__flex {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
    align-items: center;
 }
 
-.footer__phone,
-.footer__hashtag {
-   color: inherit;
+.main__footer.index {
+   position: relative;
+   z-index: 20;
+   background-color: var(--opacity-footer);
+   margin-top: -120px;
 }
 
 .footer__contacts {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   align-items: center;
    font-weight: 700;
    font-size: 21px;
    line-height: 26px;
 }
 
 .footer__hashtag {
-   margin: 0;
-   margin-left: 0;
+   margin-left: 75px;
+}
+
+.footer__phone {
+   margin-top: 5px;
+   margin-left: 70px;
+   margin-bottom: 20px;
 }
 
 .footer__contacts a:hover,
@@ -402,7 +415,6 @@ img {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   align-content: center;
    list-style: none;
    padding: 0;
    margin: 0;
@@ -462,12 +474,16 @@ img {
    opacity: 0.3;
 }
 
-.button__copyright {
+.footer__copyright {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-.footer__copyright p {
-   line-height: 26px;
+.button__copyright {
+   vertical-align: middle;
    text-align: center;
+   margin-right: 50px;
 }
 
 .button__copyright:hover path {
@@ -488,31 +504,82 @@ img {
 
 .filter__form {
    display: grid;
+   align-items: center;
 }
 
 .filter__price {
    grid-column: 4/5;
 }
 
-.filter__list {
+.filter__list .filter__option {
    list-style: none;
+   margin: 0;
+   padding: 0;
+   margin-top: 25px;
+}
+
+.filter fieldset {
+   border: none;
 }
 
 .filter__title {
    font-weight: 700;
-
+   font-size: 16px;
    color: var(--basic-white);
+   padding-top: 27px;
 }
 .filter__option {
    color: var(--basic-white);
 }
 
+.filter__infra {
+   margin-left: 72px;
+   padding: 0;
+   position: relative;
+}
+
+.filter__housing {
+   padding: 0;
+}
+
+.filter__option label {
+   position: relative;
+   display: block;
+   cursor: pointer;
+   user-select: none;
+}
+
+.filter__input-checkbox + label::before {
+   content: "";
+   position: absolute;
+   margin-left: -40px;
+   transform: translateY(-2px);
+   width: 23px;
+   height: 23px;
+   background-image: url("../img/icons/checkbox-off.svg");
+}
+
+.filter__input-checkbox:checked + label::before {
+   width: 27px;
+   background-image: url("../img/icons/checkbox-on.svg");
+}
+
+.filter__input-checkbox:disabled + label::before {
+   background-image: url("../img/icons/checkbox-on-disabled.svg");
+}
+
+.filter__input-checkbox:checked:disabled + label::before {
+   width: 27px;
+   background-image: url("../img/icons/checkbox-off-disabled.svg");
+}
+
 /*сложный фильтр*/
 .filter__price {
    width: 317px;
-   margin: 0;
    padding: 0;
    border: none;
+   margin-right: 72px;
+   margin-left: auto;
 }
 
 .range__prices {
@@ -601,8 +668,13 @@ img {
 .filter__button {
    display: block;
    margin: 0 auto;
-   padding: 7px 35px 8px 36px;
+   padding: 5px 35px 4px 36px;
    border: 2px solid var(--basic-white);
+   font: inherit;
+   text-align: center;
+   color: var(--basic-white);
+   vertical-align: middle;
+   text-transform: uppercase;
    background: transparent;
    border-radius: 2px;
    cursor: pointer;
@@ -617,16 +689,19 @@ img {
 .sorting {
    min-height: 86px;
    display: flex;
+   align-items: center;
 }
 
 .sorting__results {
    font-weight: 700;
    font-size: 21px;
    line-height: 26px;
+   margin-left: 73px;
 }
 .sorting__text {
    font-size: 12px;
    line-height: 18px;
+   margin-left: 46px;
 }
 
 .sorting__list {
@@ -635,6 +710,7 @@ img {
 }
 
 .sorting__link {
+   margin-right: 33px;
    color: var(--basic-black);
    opacity: 0.3;
    font-size: 12px;
@@ -657,6 +733,29 @@ img {
    color: var(--basic-black);
    opacity: 1;
    border-bottom: none;
+}
+
+.sorting__arrows {
+   margin-left: auto;
+   margin-right: 73px;
+}
+
+.arrow_up {
+   margin-right: 8px;
+}
+
+.arrow_down.active path {
+   fill: var(--basic-blue);
+}
+
+.arrow_up:hover path,
+.arrow_down:hover path {
+   fill: var(--basic-black);
+}
+
+.arrow_up:active path,
+.arrow_down:active path {
+   fill: var(--basic-blue);
 }
 
 /* список отелей */
@@ -730,7 +829,9 @@ img {
 .hotel__button {
    color: var(--basic-white);
    background-color: var(--basic-blue);
+   font-size: 14px;
    font-weight: 700;
+   line-height: 21px;
    padding: 3px 16px 3px 17px;
 }
 
@@ -745,6 +846,8 @@ img {
 
 .button__book {
    font-weight: 700;
+   font-size: 14px;
+   line-height: 21px;
    padding: 3px 16px 3px 17px;
    margin-left: 6px;
    vertical-align: baseline;

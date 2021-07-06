@@ -35,35 +35,43 @@
          <section class="filter">
             <h1 class="visually-hidden">Фильтр гостиниц</h1>
             <form class="filter__form" method="get" action="https://echo.htmlacademy.ru" name="search_form">
-               <fieldset>
-                  <legend class="filter__title">Инфраструктура</legend>
+               <fieldset class="filter__infra">
+                  <legend class="filter__title">Инфраструктура:</legend>
                   <ul class="filter__list">
                      <li class="filter__option">
-                        <label><input type="checkbox" name="swimingpool" checked>Бассейн</label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="swimingpool"
+                           id="pool" checked>
+                        <label for="pool">Бассейн</label>
                      </li>
                      <li class="filter__option">
-                        <label><input type="checkbox" name="parking">Парковка</label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="parking"
+                           id="parking">
+                        <label for="parking">Парковка</label>
                      </li>
                      <li class="filter__option">
-                        <label><input type="checkbox" name="wifi">Wi-Fi</label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="wifi" id="wifi">
+                        <label for="wifi">Wi-Fi</label>
                      </li>
                   </ul>
                </fieldset>
 
-               <fieldset>
-                  <legend class="filter__title">Тип жилья</legend>
+               <fieldset class="filter__housing">
+                  <legend class="filter__title">Тип жилья:</legend>
                   <ul class="filter__list">
                      <li class="filter__option">
-                        <label><input class="filter__input-checkbox filter__input" type="checkbox" name="hotel"
-                              checked>Гостиница</label>
+                        <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="hotel"
+                           id="hotel" checked>
+                        <label for="hotel">Гостиница</label>
                      </li>
                      <li class="filter__option">
-                        <label><input class="filter__input-checkbox filter__input" type="checkbox" name="motel"
-                              checked>Мотель</label>
+                        <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="motel"
+                           id="motel" checked>
+                        <label for="motel">Мотель</label>
                      </li>
                      <li class="filter__option">
-                        <label><input class="filter__input-checkbox filter__input" type="checkbox" name="apartment"
-                              checked>Апартаменты</label>
+                        <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox"
+                           name="apartment" id="apartment" checked>
+                        <label for="apartment">Апартаменты</label>
                      </li>
                   </ul>
                </fieldset>
@@ -86,7 +94,7 @@
                      <div class="toggle toggle-max"></div>
                   </div>
 
-                  <button type="submit" class="button filter__button">Показать</button>
+                  <button type="submit" class="filter__button">Показать</button>
 
                </fieldset>
             </form>
@@ -94,7 +102,7 @@
 
          <section class="sorting">
             <h2 class="visually-hidden">Сортировка гостиниц</h2>
-            <p class="sorting__results">Найдено 3:</p>
+            <p class="sorting__results">Найдено: 3</p>
             <p class="sorting__text">Сортировка:</p>
             <ul class="sorting__list">
                <li>
@@ -108,8 +116,16 @@
                </li>
             </ul>
             <div class="sorting__arrows">
-               <a class="arrow_up" href="#">Arrow_Up</a>
-               <a class="arrow_down" href="#">Arrow_down</a>
+               <a class="arrow_up" href="#">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+                  </svg>
+               </a>
+               <a class="arrow_downz" href="#">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M5.5 10L0 0H11" fill="#CACACA" />
+                  </svg>
+               </a>
             </div>
 
          </section>
