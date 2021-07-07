@@ -109,6 +109,50 @@
         <h3>Заинтересовались?</h3>
         <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="button" href="blank.html">Поиск гостиницы в Cедоне</a>
+
+        <form class="booking__form" action="https://echo.htmlacademy.ru" method="POST"">
+          <ul class=" booking__list">
+          <li class="booking__item">
+            <label for="arrival-date">Дата заезда:</label>
+            <input class="booking__item-input big" type="text" name="arrival-date" id="arrival_date"
+              value="24 апреля 2017">
+            <button class="calendar-button calendar-button-check-in" type="button">
+              <span class="visually-hidden">Кнопка выбора даты заезда</span>
+            </button>
+          </li>
+          <li class="booking__item">
+            <label for="departure-date">Дата выезда:</label>
+            <input class="booking__item-input big" type="text" name="departure-date" id="departure_date"
+              value="4 июля 2017">
+            <button class="calendar-button calendar-button-check-out" type="button">
+              <span class="visually-hidden">Кнопка выбора даты выезда</span>
+            </button>
+          </li>
+          
+            <li class="booking__item">
+              <div class="people-wrapper">
+              <label for="adults" class="item-name adults">Взрослые:</label>
+              <button class="quantity-btn minus" type="button">
+                <span class="visually-hidden">Кнопка меньше</span>
+              </button>
+              <input class="booking__item-input small" id="adults" type="text" name="number-of-adults" placeholder="2">
+              <button class="quantity-btn plus" type="button">
+                <span class="visually-hidden">Кнопка больше</span>
+              </button>
+              <label for="kids" class="item-name kids">Дети:</label>
+              <button class="quantity-btn minus" type="button">
+                <span class="visually-hidden">Кнопка меньше</span>
+              </button>
+              <input class="booking__item-input small" id="kids" type="text" name="number-of-kids" placeholder="0">
+              <button class="quantity-btn plus" type="button">
+                <span class="visually-hidden">Кнопка больше</span>
+              </button>
+            </div>
+            </li>
+          
+          </ul>
+          <button class="booking__btn" type="submit">Найти</button>
+        </form>
       </section>
 
       <section class="map">
@@ -203,6 +247,8 @@
 
     </footer>
   </div>
+
+
 
 </body>
 

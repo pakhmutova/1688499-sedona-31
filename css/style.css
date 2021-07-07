@@ -20,7 +20,9 @@
    --opacity-footer: rgba(255, 255, 255, 0.9);
    --toggle-color: #ababab;
    --toggle-shadow: rgba(171, 171, 171, 0.3);
+   --pop-up-shaddow: rgba(0, 1, 1, 0.15);
    --border-grey: #e5e5e5;
+   --pop-up-grey: #a9a9a9;
 }
 
 .page__body {
@@ -314,12 +316,13 @@ img {
    color: var(--basic-dark);
 }
 
-/* Бронирование Flex */
+/* Бронирование */
 .booking {
    /* min-height: 233px; */
    display: flex;
    flex-direction: column;
    align-items: center;
+   position: relative;
 }
 
 .booking h3 {
@@ -363,6 +366,207 @@ img {
 
 .button:active {
    background-color: var(--brown-active);
+   color: var(--opacity-color);
+}
+
+/*pop-up form*/
+
+.booking__form {
+   display: flex;
+   flex-direction: column;
+   width: 568px;
+   min-height: 395px;
+   background: var(--basic-white);
+   box-shadow: 0px 7px 15px var(--pop-up-shaddow);
+   line-height: 26px;
+   font-weight: 700;
+}
+
+.booking__list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.booking__item {
+   display: flex;
+   align-items: center;
+   padding-left: 55px;
+   margin: 0;
+   margin-bottom: 29px;
+   position: relative;
+}
+
+.people-wrapper {
+   display: flex;
+   align-items: center;
+}
+
+.booking__item:first-child {
+   margin-top: 55px;
+}
+
+.booking__item label {
+   margin-right: 24px;
+   cursor: pointer;
+}
+
+.booking__item:nth-child(2) label {
+   margin-right: 21px;
+}
+
+.booking__item .adults {
+   margin-right: 41px;
+}
+
+.booking__item .kids {
+   margin-left: 53px;
+   margin-right: 27px;
+}
+
+.booking__item-input {
+   text-transform: uppercase;
+   font-weight: 700;
+   line-height: 26px;
+   font-size: 14px;
+   color: var(--basic-black);
+   background: none;
+   background-color: var(--basic-background);
+   border: none;
+   padding-left: 13px;
+   style: none;
+}
+
+.booking__item .big {
+   width: 333px;
+   height: 38px;
+}
+
+.calendar-button {
+   width: 21px;
+   height: 22px;
+   outline: none;
+   border: none;
+   background: url(../img/icons/calendar.svg) no-repeat center center;
+   position: absolute;
+   right: 64px;
+   bottom: 8px;
+   cursor: pointer;
+}
+
+.quantity-btn {
+   font: inherit;
+   color: var(--pop-up-grey);
+   background-color: var(--basic-background);
+   border: none;
+   text-transform: uppercase;
+   text-align: center;
+   position: relative;
+   cursor: pointer;
+}
+
+.quantity-btn,
+.booking__item-input.small {
+   width: 38px;
+   height: 38px;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+.plus::before {
+   content: "";
+   background: #a9a9a9;
+   height: 11px;
+   width: 3px;
+   position: absolute;
+   left: 17px;
+   top: 13px;
+}
+
+.plus::after {
+   content: "";
+   height: 3px;
+   width: 11px;
+   background: var(--pop-up-grey);
+   position: absolute;
+   left: 13px;
+   top: 17px;
+}
+
+.minus::after {
+   content: "";
+   height: 3px;
+   width: 11px;
+   background: var(--pop-up-grey);
+   position: absolute;
+   left: 13px;
+   top: 17px;
+}
+
+.booking__btn {
+   width: 458px;
+   height: 58px;
+   background-color: var(--basic-blue);
+   font-size: 21px;
+   font-weight: bold;
+   color: var(--basic-white);
+   text-transform: uppercase;
+   text-align: center;
+   margin-top: 26px;
+   margin-right: auto;
+   margin-left: auto;
+   border: none;
+   cursor: pointer;
+}
+
+/*смена статуса в pop-up*/
+
+.booking__form input:hover {
+   background: var(--grey-hover);
+}
+
+.booking__form input:focus {
+   list-style: none;
+   background-color: var(--basic-white);
+   border-color: var(--border-grey);
+   outline-width: 2px;
+   outline-color: var(--border-grey);
+}
+
+.calendar-button:hover,
+.calendar-button:focus {
+   background: url(../img/icons/calendar-hover.svg) no-repeat center center;
+}
+
+.calendar-button:active {
+   background: url(../img/icons/calendar-active.svg) no-repeat center center;
+}
+
+.minus:hover::after {
+   background: var(--basic-black);
+}
+
+.minus:active::after {
+   background: var(--basic-blue);
+}
+
+.plus:hover::after,
+.plus:hover::before {
+   background: var(--basic-black);
+}
+
+.plus:active::after,
+.plus:active::before {
+   background: var(--basic-blue);
+}
+
+.booking__btn:hover {
+   background-color: var(--blue-hover);
+}
+
+.booking__btn:active {
+   background-color: var(--basic-blue);
    color: var(--opacity-color);
 }
 
