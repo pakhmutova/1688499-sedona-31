@@ -168,7 +168,7 @@ img {
 }
 
 .welcome {
-   height: 510px;
+   height: 511px;
    background-image: url(../img/images/welcome_sedona.svg), url(../img/images/polygon.svg),
       url(../img/images/sedona.jpg);
    background-repeat: no-repeat;
@@ -229,6 +229,31 @@ img {
    flex-direction: column;
    width: 400px;
    justify-content: center;
+   position: relative;
+}
+
+.bridge {
+   justify-self: flex-end;
+}
+
+.features__item-city:after {
+   content: "";
+   background: url("../img/images/reason_1.jpg") no-repeat;
+   background-color: var(--basic-blue);
+   width: 800px;
+   height: 256px;
+   position: absolute;
+   left: 400px;
+}
+
+.features__item-bridge::before {
+   content: "";
+   background: url("../img/images/reason_2.jpg") no-repeat;
+   background-color: var(--basic-blue);
+   width: 800px;
+   height: 256px;
+   position: absolute;
+   right: 400px;
 }
 
 .features__item-city h3 {
@@ -254,10 +279,6 @@ img {
    background-color: var(--grey-background);
 }
 
-.features__pic-2 {
-   order: -1;
-}
-
 .features__item {
    grid-column: 1/-1;
 }
@@ -276,15 +297,41 @@ img {
    flex-direction: column;
    width: 400px;
    text-align: center;
+   position: relative;
 }
 
-.reasons__item img {
-   display: block;
-   margin-left: 162px;
-   margin-bottom: 5px;
+.life::before {
+   content: "";
+   position: absolute;
+   background: url("../img/icons/house.svg") no-repeat;
+   width: 75px;
+   height: 72px;
+   top: -10px;
+   left: 162px;
+}
+
+.food::before {
+   content: "";
+   position: absolute;
+   background: url("../img/icons/food.svg") no-repeat;
+   width: 75px;
+   height: 70px;
+   top: -10px;
+   left: 163px;
+}
+
+.gift::before {
+   content: "";
+   position: absolute;
+   background: url("../img/icons/gift.svg") no-repeat;
+   width: 64px;
+   height: 76px;
+   top: -15px;
+   left: 168px;
 }
 
 .reasons__item h3 {
+   margin-top: 88px;
    margin-bottom: 11px;
 }
 
@@ -318,7 +365,7 @@ img {
 
 /* Бронирование */
 .booking {
-   /* min-height: 233px; */
+   min-height: 233px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -336,7 +383,7 @@ img {
 
 .booking p {
    width: 500px;
-   margin-top: 25px;
+   margin-top: 30px;
    line-height: 24px;
    text-align: center;
    color: var(--basic-dark);
@@ -372,6 +419,9 @@ img {
 /*pop-up form*/
 
 .booking__form {
+   position: absolute;
+   top: 100%;
+   left: calc(50% - 568px / 2);
    display: flex;
    flex-direction: column;
    width: 568px;
@@ -380,6 +430,37 @@ img {
    box-shadow: 0px 7px 15px var(--pop-up-shaddow);
    line-height: 26px;
    font-weight: 700;
+}
+
+.booking__form.hidden {
+   transform: translateY(-100%);
+   visibility: hidden;
+}
+
+.booking__form.error {
+   animation: shake 0.6s;
+}
+
+@keyframes shake {
+   0%,
+   100% {
+      transform: translateX(0);
+   }
+
+   10%,
+   30%,
+   50%,
+   70%,
+   90% {
+      transform: translateX(-10px);
+   }
+
+   20%,
+   40%,
+   60%,
+   80% {
+      transform: translateX(10px);
+   }
 }
 
 .booking__list {
@@ -527,11 +608,8 @@ img {
 }
 
 .booking__form input:focus {
-   list-style: none;
+   outline: 2px solid var(--border-grey);
    background-color: var(--basic-white);
-   border-color: var(--border-grey);
-   outline-width: 2px;
-   outline-color: var(--border-grey);
 }
 
 .calendar-button:hover,
@@ -565,13 +643,16 @@ img {
    background-color: var(--blue-hover);
 }
 
+.booking__btn:focus,
 .booking__btn:active {
-   background-color: var(--basic-blue);
+   background-color: var(--blue-active);
    color: var(--opacity-color);
 }
 
-.map iframe {
-   position: absolute;
+/*карта*/
+.map {
+   background: url(../img/images/map.jpg) no-repeat;
+   height: 600px;
 }
 
 /* Footer */
@@ -1044,7 +1125,7 @@ img {
 }
 
 .hotel__button:active {
-   background-color: var(--basic-blue);
+   background-color: var(--blue-active);
    color: var(--opacity-color);
 }
 

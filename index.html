@@ -49,24 +49,19 @@
               <p>&mdash;№1&mdash;</p>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="features__pic-1" src="./img/images/reason_1.jpg" width="800" height="256"
-              alt="первая причина посетить Седону.">
           </li>
 
           <li class="features__item">
             <ul class="reasons__list">
-              <li class="reasons__item">
-                <img src="./img/icons/house.svg" width="75" height="72" alt="дом.">
+              <li class="reasons__item life">
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="reasons__item">
-                <img src="./img/icons/food.svg" width="75" height="72" alt="еда.">
+              <li class="reasons__item food">
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li class="reasons__item">
-                <img src="./img/icons/gift.svg" width="64" height="72" alt="сувениры.">
+              <li class="reasons__item gift">
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
@@ -74,14 +69,12 @@
             </ul>
           </li>
 
-          <li class="features__item-first">
+          <li class="features__item-first bridge">
             <div class="features__item-bridge">
               <h3>Там есть<br> мост дъявола</h3>
               <p>&mdash;№2&mdash;</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
-            <img class="features__pic-2" src="./img/images/reason_2.jpg" width="800" height="256"
-              alt="вторая причина посетить Седону.">
           </li>
 
           <li class="features__item-second">
@@ -108,48 +101,49 @@
         <h2 class="visually-hidden">Бронирование в Седоне</h2>
         <h3>Заинтересовались?</h3>
         <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a class="button" href="blank.html">Поиск гостиницы в Cедоне</a>
+        <a class="search-btn button" href="blank.html">Поиск гостиницы в Cедоне</a>
 
-        <form class="booking__form" action="https://echo.htmlacademy.ru" method="POST"">
+        <form class="booking__form" action="https://echo.htmlacademy.ru" method="POST">
           <ul class=" booking__list">
-          <li class="booking__item">
-            <label for="arrival-date">Дата заезда:</label>
-            <input class="booking__item-input big" type="text" name="arrival-date" id="arrival_date"
-              value="24 апреля 2017">
-            <button class="calendar-button calendar-button-check-in" type="button">
-              <span class="visually-hidden">Кнопка выбора даты заезда</span>
-            </button>
-          </li>
-          <li class="booking__item">
-            <label for="departure-date">Дата выезда:</label>
-            <input class="booking__item-input big" type="text" name="departure-date" id="departure_date"
-              value="4 июля 2017">
-            <button class="calendar-button calendar-button-check-out" type="button">
-              <span class="visually-hidden">Кнопка выбора даты выезда</span>
-            </button>
-          </li>
-          
+            <li class="booking__item">
+              <label for="arrival-date">Дата заезда:</label>
+              <input class="booking__item-input big" type="text" name="arrival-date" id="arrival-date"
+                value="24 апреля 2017">
+              <button class="calendar-button calendar-button-check-in" type="button">
+                <span class="visually-hidden">Кнопка выбора даты заезда</span>
+              </button>
+            </li>
+            <li class="booking__item">
+              <label for="departure-date">Дата выезда:</label>
+              <input class="booking__item-input big" type="text" name="departure-date" id="departure-date"
+                value="4 июля 2017">
+              <button class="calendar-button calendar-button-check-out" type="button">
+                <span class="visually-hidden">Кнопка выбора даты выезда</span>
+              </button>
+            </li>
+
             <li class="booking__item">
               <div class="people-wrapper">
-              <label for="adults" class="item-name adults">Взрослые:</label>
-              <button class="quantity-btn minus" type="button">
-                <span class="visually-hidden">Кнопка меньше</span>
-              </button>
-              <input class="booking__item-input small" id="adults" type="text" name="number-of-adults" placeholder="2">
-              <button class="quantity-btn plus" type="button">
-                <span class="visually-hidden">Кнопка больше</span>
-              </button>
-              <label for="kids" class="item-name kids">Дети:</label>
-              <button class="quantity-btn minus" type="button">
-                <span class="visually-hidden">Кнопка меньше</span>
-              </button>
-              <input class="booking__item-input small" id="kids" type="text" name="number-of-kids" placeholder="0">
-              <button class="quantity-btn plus" type="button">
-                <span class="visually-hidden">Кнопка больше</span>
-              </button>
-            </div>
+                <label for="adults" class="item-name adults">Взрослые:</label>
+                <button class="quantity-btn minus" type="button">
+                  <span class="visually-hidden">Кнопка меньше</span>
+                </button>
+                <input class="booking__item-input small" id="adults" type="text" name="number-of-adults"
+                  placeholder="2">
+                <button class="quantity-btn plus" type="button">
+                  <span class="visually-hidden">Кнопка больше</span>
+                </button>
+                <label for="kids" class="item-name kids">Дети:</label>
+                <button class="quantity-btn minus" type="button">
+                  <span class="visually-hidden">Кнопка меньше</span>
+                </button>
+                <input class="booking__item-input small" id="kids" type="text" name="number-of-kids" placeholder="0">
+                <button class="quantity-btn plus" type="button">
+                  <span class="visually-hidden">Кнопка больше</span>
+                </button>
+              </div>
             </li>
-          
+
           </ul>
           <button class="booking__btn" type="submit">Найти</button>
         </form>
@@ -158,10 +152,9 @@
       <section class="map">
         <h2 class="visually-hidden">Карта Седоны</h2>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050599254!2d-111.83015808520851!3d34.854373381007065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1625555817361!5m2!1sru!2sru"" 
-        width=" 1200" height="593" style="border:0;" allowfullscreen="">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050599254!2d-111.83015808520851!3d34.854373381007065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1625555817361!5m2!1sru!2sru"
+          width="1200" height="593" style="border:0;" allowfullscreen="">
         </iframe>
-        <img src="./img/images/map.jpg" width="1199" height="600" alt="карта.">
       </section>
 
     </main>
@@ -248,7 +241,7 @@
     </footer>
   </div>
 
-
+  <script src="./js/booking-form.js"></script>
 
 </body>
 
