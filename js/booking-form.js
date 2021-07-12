@@ -6,13 +6,13 @@ const adultsAmount = form.querySelector("[name=number-of-adults]");
 const childrenAmount = form.querySelector("[name=number-of-kids]");
 
 
-form.classList.add('hidden');
+form.classList.add("hidden");
 
 
 
 FormToggle.addEventListener("click", function (evt) {
    evt.preventDefault();
-   form.classList.toggle('hidden');
+   form.classList.toggle("hidden");
 });
 
 form.addEventListener("submit", function (evt) {

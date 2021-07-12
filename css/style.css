@@ -13,6 +13,7 @@
    --basic-blue: #81b3d2;
    --blue-active: #5496bd;
    --blue-hover: #669ec0;
+   --blue-welcome: #e2f0f8;
    --basic-brown: #766357;
    --brown-active: #503e33;
    --brown-hover: #604e43;
@@ -137,8 +138,8 @@ img {
 
 .site__navigation a {
    display: inline-block;
-   vertical-align: middle;
-   padding: 15px 5px;
+   vertical-align: top;
+
    color: var(--basic-black);
 }
 
@@ -171,6 +172,7 @@ img {
    height: 511px;
    background-image: url(../img/images/welcome_sedona.svg), url(../img/images/polygon.svg),
       url(../img/images/sedona.jpg);
+   background-color: var(--blue-welcome);
    background-repeat: no-repeat;
    background-position: center, bottom, center;
    margin-bottom: 10px;
@@ -258,13 +260,14 @@ img {
 
 .features__item-city h3 {
    margin: 0 139px;
+   margin-bottom: 5px;
 }
 
 .features__item-city p,
 .features__item-bridge p {
-   margin-top: 23px;
-   margin-bottom: 0;
-   padding: 0 40px;
+   margin-top: 25px;
+   margin-bottom: 5px;
+   padding: 0 45px;
 }
 
 .features__item-bridge h3 {
@@ -349,13 +352,18 @@ img {
 .features__item-second h3 {
    width: 150px;
    margin-top: 47px;
-   margin-left: 130px;
+   margin-left: 125px;
 }
 
 .features__item-second p {
    width: 270px;
-   margin-top: 22px;
-   margin-left: 70px;
+   margin-top: 25px;
+   margin-left: 65px;
+}
+
+.features__item-second:last-child p {
+   width: 250px;
+   margin-left: 76px;
 }
 
 .features__item-second p,
@@ -377,7 +385,7 @@ img {
    font-size: 30px;
    line-height: 24px;
    text-align: center;
-   padding: 0;
+   padding-right: 10px;
    margin: 0;
 }
 
@@ -682,13 +690,13 @@ img {
 }
 
 .footer__hashtag {
-   margin-left: 75px;
+   margin-left: 70px;
+   margin-bottom: 12px;
 }
 
 .footer__phone {
-   margin-top: 5px;
    margin-left: 70px;
-   margin-bottom: 20px;
+   margin-bottom: 30px;
 }
 
 .footer__contacts a:hover,
@@ -703,6 +711,7 @@ img {
    list-style: none;
    padding: 0;
    margin: 0;
+   margin-left: 4px;
 }
 
 .social__item {
@@ -711,6 +720,7 @@ img {
    height: 48px;
    background-color: var(--basic-blue);
    margin-right: 6px;
+   margin-bottom: 15px;
 }
 
 .social__item::before {
@@ -760,15 +770,16 @@ img {
 }
 
 .footer__copyright {
+   width: 400px;
    display: flex;
-   justify-content: center;
    align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
 }
 
 .button__copyright {
    vertical-align: middle;
-   text-align: center;
-   margin-right: 50px;
+   margin-right: 55px;
 }
 
 .button__copyright:hover path {
@@ -811,7 +822,7 @@ img {
    font-weight: 700;
    font-size: 16px;
    color: var(--basic-white);
-   padding-top: 27px;
+   padding-top: 25px;
 }
 .filter__option {
    color: var(--basic-white);
@@ -867,11 +878,20 @@ img {
    margin-left: auto;
 }
 
+.filter__title-2 {
+   font-weight: 700;
+   font-size: 16px;
+   color: var(--basic-white);
+   margin-bottom: 10px;
+   padding-top: 21px;
+}
+
 .range__prices {
    position: relative;
-   height: 36px;
-   margin-top: 11px;
-   margin-bottom: 20px;
+   height: 32px;
+   width: 314px;
+   /* margin-top: 10px; */
+   margin-bottom: 18px;
    font-size: 0;
    border: 2px solid var(--basic-white);
    border-radius: 2px;
@@ -889,6 +909,7 @@ img {
 
 .range__prices label {
    display: inline-block;
+   vertical-align: top;
    margin-top: 6px;
    color: var(--basic-white);
    font-size: 14px;
@@ -905,6 +926,18 @@ img {
    line-height: 1;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
 .range__prices .min-price {
    width: 90px;
    padding-left: 65px;
@@ -917,7 +950,7 @@ img {
 
 .range__controls {
    position: relative;
-   margin-bottom: 33px;
+   margin-bottom: 32px;
 }
 
 .range__controls .scale {
@@ -947,13 +980,13 @@ img {
 }
 
 .range__controls .toggle-max {
-   left: 235px;
+   left: 252px;
 }
 
 .filter__button {
    display: block;
    margin: 0 auto;
-   padding: 5px 35px 4px 36px;
+   padding: 6px 34px;
    border: 2px solid var(--basic-white);
    font: inherit;
    text-align: center;
